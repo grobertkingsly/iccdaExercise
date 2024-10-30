@@ -1,0 +1,8 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/8c066683-0c9f-4586-8fa5-eb89734c83d5/resourceGroups/ICCDALabResourceGroup/providers/Microsoft.Web/sites/ICCDAExercise",
+    "appService.deploySubpath": ".",
+    "appService.zipIgnorePattern": [
+        "node_modules{,/**}",
+        ".vscode{,/**}"
+    ]
+}

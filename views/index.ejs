@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Azure SQL Data</title>
+</head>
+<body>
+  <style>
+    table, th, td {
+      border:1px solid rgb(200, 50, 50);
+    }
+    </style>
+  <h1>Data from Azure SQL in Table Format</h1>
+  <table>
+    <thead>
+      <tr>
+        <% for (let column in data[0]) { %>
+          <th><%= column %></th>
+        <% } %>
+      </tr>
+    </thead>
+    <tbody>
+      <% for (let row of data) { %>
+        <tr>
+          <% for (let key in row) { %>
+            <td><%= row[key] %></td>
+          <% } %>
+        </tr>
+      <% } %>
+    </tbody>
+  </table>
+  <h1>Data from Azure SQL Raw Format</h1>
+  <ul>
+    <% data.forEach(row => { %>
+      <li><%= JSON.stringify(row) %></li>
+    <% }) %>
+  </ul>
+</body>
+</html>
